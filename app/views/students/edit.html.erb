@@ -1,0 +1,12 @@
+<h3> Edi Student Page </h3>
+
+<%= form_for (@student) do |f| %>
+
+<label> Student Name: </label><br>
+<%= f.text_field :name %><br>
+
+<label> Student mod: </label><br>
+<%= f.text_field :mod %><br>
+
+    <%= f.submit %>
+<% end %>

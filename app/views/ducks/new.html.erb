@@ -1,0 +1,15 @@
+<h3> New Duck Page </h3>
+
+<%= form_for (@duck) do |f| %>
+
+<label> Duck Name: </label><br>
+<%= f.text_field :name %><br>
+
+<label> Duck Description: </label><br>
+<%= f.text_field :description %><br>
+
+<label> Duck Owner: </label><br>
+<%= f.collection_select :student_id, @students, :id, :name %><br>
+
+    <%= f.submit %>
+<% end %>

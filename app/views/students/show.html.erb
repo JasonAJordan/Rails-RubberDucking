@@ -1,0 +1,13 @@
+<h3> Student Show Page </h3>
+
+<p> <%= @student.name %> </p>
+<p> Mod: <%= @student.mod %> </p>
+<p> List of Ducks <% ducks_owned = @ducks.select{ |duck| @student.ducks.include?(duck) } %> 
+                <% names =  ducks_owned.map{ |duck| duck.name } %>
+                
+    <% names.each do |d|%>
+    :<%= d %>
+    <% end %>
+    <%# <%= ducks_owned.each {|duck|  duck }%>
+
+</p>
